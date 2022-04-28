@@ -3,7 +3,9 @@ package main
 import "fmt"
 
 func main() {
-	/* a Rune Literal is expressed as one or more characters enclosed in single quotes like ‘g’, ‘\t’
+	/*
+
+	   a Rune Literal is expressed as one or more characters enclosed in single quotes like ‘g’, ‘\t’
 	   In between single quotes, you are allowed to place any character except a newline and an unescaped single quote.
 	*/
 	var b rune
