@@ -86,4 +86,11 @@ quote on either side.`
 	}
 	fmt.Println("len of 'Hello, 世界': ", len(a11))
 	fmt.Println("length : ", utf8.RuneCountInString(a11))
+
+	//Type then declaration struct
+
+	//type student struct {
+	//	name string
+	//	class string
+
 }
