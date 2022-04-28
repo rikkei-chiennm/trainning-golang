@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"unicode/utf8"
+)
 
 func main() {
 
@@ -24,7 +27,63 @@ func main() {
 	absoluteZero := -459.67
 	fmt.Println(absoluteZero)
 
-	// rune
+	/*
+			RUNE ; default value is 0
+			A rune is an alias to the int32 data type.
+		    Runes represent a code point in Go.
+			UTF-8 encodes all the Unicode in the range of 1 to 4 bytes, where 1 byte is used for ASCII and the rest for the Rune.
+	*/
+
 	var b rune
 	fmt.Println(b)
+	rune1 := 'B'
+	rune2 := 'g'
+	rune3 := '\a'
+
+	// Displaying rune and its type
+	fmt.Printf("Rune 1: %c; Unicode: %U; Type: %T", rune1,
+		rune1, rune1)
+
+	fmt.Printf("\nRune 2: %c; Unicode: %U; Type: %T", rune2,
+		rune2, rune2)
+
+	fmt.Printf("\nRune 3: %c ;Unicode: %U; Type: %T", rune3,
+		rune3, rune3)
+	// creater with slice contain rune
+	runeSlice := []rune{0x0053, 0x0065, 0x00f1, 0x006f, 0x0072}
+	str := string(runeSlice)
+	fmt.Println(str)
+	/*
+		BOOLEANS
+		boolean data type can be one of two values, either true or false
+	*/
+	myBool := 5 > 8
+	mybools := 5 < 7
+	fmt.Println(myBool, mybools)
+
+	/*
+			STRINGS
+			A string is a sequence of one or more characters (letters, numbers, symbols that can be either a constant or a variable.
+		    Strings exist within either back quotes ` or double quotes "
+			the backslash has no special meaning in a string literal ed: " im robot \n" => print => im robot \n
+	*/
+	myString := "hello to Go!"
+	fmt.Println(myString)
+	// create multiline strings
+	newString := `This string is on 
+multiple lines
+within a single back 
+quote on either side.`
+	fmt.Println(newString)
+	// Interpreted String Literals used "\ \"
+	secString := "Say \"hello\" to Go!"
+	fmt.Println(secString)
+
+	// Strings with UTF-8 Characters
+	a11 := "Hello, 世界z"
+	for i, c := range a11 {
+		fmt.Printf("%d: %s\n", i, string(c))
+	}
+	fmt.Println("len of 'Hello, 世界': ", len(a11))
+	fmt.Println("length : ", utf8.RuneCountInString(a11))
 }
