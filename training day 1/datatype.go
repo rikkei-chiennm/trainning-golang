@@ -93,4 +93,18 @@ quote on either side.`
 	//	name string
 	//	class string
 
+	/*
+		+ Slice  ==> seaCreatures := []string{"shark", "cuttlefish", "squid", "mantis shrimp"}
+			- A slice is an ordered sequence of elements that can change in length. Slices can increase their size dynamically.
+			- cap, length
+			- reference
+		+ Arrays ==> coral := [3]string{"blue coral", "staghorn coral", "pillar coral"}
+			- An array is an ordered sequence of elements.
+			- The capacity of an array is defined at creation time.
+			- covetousness
+		+ Maps ==> map[key]value{}
+			- The map is Go’s built-in hash or dictionary type. Maps use keys and values as a pair to store data.
+			- This is useful in programming to quickly look up values by an index, or in this case, a key.
+			- ed: map[string]string{"name": "Sammy", "animal": "shark", "color": "blue", "location": "ocean"}
+	*/
 }
