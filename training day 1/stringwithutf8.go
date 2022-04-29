@@ -27,11 +27,12 @@ func main() {
 	stringNure := []rune(string1)
 
 	string2 := "abcdefghi"
+	stringnil := []rune(string2)
 	for _, val := range stringNure {
 		fmt.Printf("%c", val)
 	}
 	fmt.Println()
-	for _, val1 := range string2 {
+	for _, val1 := range stringnil {
 		fmt.Printf("%c", val1)
 	}
 
