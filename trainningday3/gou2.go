@@ -29,4 +29,5 @@ func increment() {
 	counter++
 	m.Unlock()
 	wg.Done()
+
 }
