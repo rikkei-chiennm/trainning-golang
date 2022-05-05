@@ -36,3 +36,8 @@ func checkSite(link string) {
 	fmt.Println(link + "is OK!" + resp.Status)
 	wg.Done()
 }
+
+/* goroutine giao tiep bang cach su dung channel
+1 2 3 3 5 6
+1 2 3 3 5 6
+*/
