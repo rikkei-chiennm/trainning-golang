@@ -46,3 +46,8 @@ func main() {
 	print("rank ")
 	fmt.Print(rankSort(slice1))
 }
+
+/*
+ý tưởng mới về rank sort
+rank[i]=rank[i-1]+số phần tử của [i-1]
+*/
