@@ -58,7 +58,7 @@ func main() {
 		fmt.Println(resL.Error)
 	}
 
-	// // update user with id = 4 , email = tu123@gmai.com
+	// // update user with id = 4 , email = tuan123@gmai.com
 
 	var userUpdate User
 	db.First(&userUpdate, 4)
