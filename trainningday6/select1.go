@@ -16,16 +16,20 @@ func main() {
 	ex2 := make(chan string)
 	go example1(ex1)
 	go example2(ex2)
+
 	select {
 	case s1 := <-ex1:
 		fmt.Println(s1)
 	case s2 := <-ex2:
 		fmt.Println(s2)
+	default:
+		fmt.Println("error")
 	}
 
+	// muốn chạy xong cả 2 quy trình thì dùng vòng lặp for vào select x chạy từ 1 tới 2
 }
 func example1(ex1 chan string) {
-	time.Sleep(3 * time.Second)
+	time.Sleep(2 * time.Second)
 	ex1 <- "run ex1"
 }
 func example2(ex2 chan string) {
