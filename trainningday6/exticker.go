@@ -15,7 +15,6 @@ func main() {
 				return
 			case _ = <-ticker.C:
 				fmt.Println("Ticker not stop")
-
 			}
 		}
 	}()
